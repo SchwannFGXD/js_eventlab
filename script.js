@@ -2,6 +2,7 @@ const showDateButton = document.getElementById("date");
 
 showDateButton.addEventListener("click", (event) => {
   console.log(`The date is ${Date()}`);
+  window.alert(`The date is ${Date()}`)
 });
 
 const button = document.getElementById("enter");
