@@ -7,6 +7,10 @@ button.addEventListener("click", (event) => {
 //Form
 const toDoList = document.querySelector("#textForm")
 
+function removeItem(){
+  this.parentNode.remove();
+}
+
 const handleToDoListSubmit = (event) => {
 
     event.preventDefault();
@@ -15,13 +19,16 @@ const handleToDoListSubmit = (event) => {
     createdList.textContent = event.target.textBox.value; 
     
     const createdButton = document.createElement("button");
+    createdButton.setAttribute("class","deleteButton");
     createdButton.appendChild(document.createTextNode("Delete"));
+    createdButton.addEventListener("click", removeItem);
 
     const newItem = document.querySelector("#list");
     newItem.appendChild(createdList);
-    newItem.appendChild(createdButton);
+    createdList.appendChild(createdButton);
   }
 
+ 
   toDoList.addEventListener("submit", handleToDoListSubmit);
 
   
