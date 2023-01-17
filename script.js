@@ -1,4 +1,4 @@
-const button = document.getElementById("#enter");
+const button = document.getElementById("enter");
 
 button.addEventListener("click", (event) => {
   console.log("The button has been clicked!");
@@ -22,6 +22,6 @@ const handleToDoListSubmit = (event) => {
     newItem.appendChild(createdList);
   }
 
-  toDoList.addEventListener("submit", handletoDoListFormSubmit);
+  toDoList.addEventListener("submit", handleToDoListSubmit);
 
   
